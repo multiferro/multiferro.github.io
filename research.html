@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Ferrolab</title>
+<meta name="description" content="Research topics of Sergey Lisenkov: antiferroelectrics, hybrid and halide perovskites, caloric effects, relaxors, multiferroics and simulation methods.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="wrap site-head">
+  <a class="brand" href="index.html">
+    <span class="brand-name">Ferrolab</span>
+    <span class="brand-sub">Computational ferroelectrics and multiferroics at USF Physics</span>
+  </a>
+  <nav class="site-nav" aria-label="Site">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html" aria-current="page">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="funding.html">Funding</a></li>
+      <li><a href="cv.pdf">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="block">
+    <h1>Research</h1>
+    <p class="lede">Ferroics are materials with a switchable order: a polarization, a magnetization or a strain that an external field can reverse. I predict their properties from first principles and follow them at finite temperature with atomistic simulations, aiming at materials for cooling, sensing, memory and spin control.</p>
+    <nav class="topics" aria-label="Topics on this page">
+      <a href="#antiferroelectrics">Antiferroelectrics</a>
+      <a href="#perovskites">Hybrid and halide perovskites</a>
+      <a href="#caloric">Caloric effects</a>
+      <a href="#relaxors">Relaxors</a>
+      <a href="#multiferroics">Multiferroics</a>
+      <a href="#methods">Methods</a>
+    </nav>
+  </section>
+
+  <section class="theme" id="antiferroelectrics">
+    <h2>Antiferroelectrics at small scale</h2>
+    <div class="theme-body">
+      <p>Lead zirconate, PbZrO<sub>3</sub>, is the archetypal antiferroelectric: neighbouring dipoles cancel, so the crystal carries no net polarization until a strong field forces one. With collaborators at Georgia Tech, Queen's University Belfast and Trinity College Dublin, I study what this means when the material is a thin film or a nanostructure only a few unit cells across. The simulations predicted a critical thickness below which antiferroelectricity gives way to ferroelectricity, found ferrielectric phases between the two, and showed how polar phases with large strain can be reached with applied fields. This work is supported by an NSF U.S.–Ireland R&amp;D Partnership award.</p>
+      <figure class="theme-fig">
+        <!-- Swap this drawing for a figure from a paper: <img src="assets/afe.png" alt="..."> -->
+        <svg viewBox="0 0 320 220" role="img" aria-labelledby="fig-afe">
+          <title id="fig-afe">Double hysteresis loop of polarization against electric field</title>
+          <g fill="none" stroke="var(--muted)" stroke-width="1.2" stroke-linecap="round">
+            <line x1="18" y1="110" x2="302" y2="110"/>
+            <line x1="160" y1="18" x2="160" y2="202"/>
+            <path d="M296 106 L302 110 L296 114"/>
+            <path d="M156 24 L160 18 L164 24"/>
+          </g>
+          <g fill="none" stroke="var(--gold)" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M160 110 L212 109 C222 108 226 72 236 58 C246 46 268 42 292 40"/>
+            <path d="M292 40 C266 42 246 46 236 52 C222 60 214 100 186 109 L160 110"/>
+            <g transform="rotate(180 160 110)">
+              <path d="M160 110 L212 109 C222 108 226 72 236 58 C246 46 268 42 292 40"/>
+              <path d="M292 40 C266 42 246 46 236 52 C222 60 214 100 186 109 L160 110"/>
+            </g>
+          </g>
+          <g class="fig-label" font-style="italic">
+            <text x="306" y="125">E</text>
+            <text x="166" y="24">P</text>
+          </g>
+        </svg>
+        <figcaption>Polarization against field in an antiferroelectric: a double loop. The crystal is non-polar at rest and becomes polar only above a critical field.</figcaption>
+      </figure>
+      <div class="theme-papers">
+        <h3>Representative papers</h3>
+        <ul class="papers">
+          <li><a href="https://doi.org/10.1002/adma.202206541">Ferrielectricity in the archetypal antiferroelectric, PbZrO<sub>3</sub></a>, <span class="where">Advanced Materials (2023)</span></li>
+          <li><a href="https://www.nature.com/articles/s41524-025-01520-w">Ferroelectricity at the extreme thickness limit in the archetypal antiferroelectric PbZrO<sub>3</sub></a>, <span class="where">npj Computational Materials (2025)</span></li>
+          <li><a href="https://www.nature.com/articles/s41467-026-77563-4">Relaxation approach to quantum-mechanical modeling of ferroelectric and antiferroelectric phase transitions</a>, <span class="where">Nature Communications (2026)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevLett.115.097601">Critical thickness for antiferroelectricity in PbZrO<sub>3</sub></a>, <span class="where">Physical Review Letters (2015)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevB.102.104101">Prediction of high strain polar phases in antiferroelectric PbZrO<sub>3</sub> from multiscale approach</a>, <span class="where">Physical Review B (2020)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="theme" id="perovskites">
+    <h2>Hybrid and halide perovskites</h2>
+    <div class="theme-body">
+      <p>Organic–inorganic hybrid perovskites and germanium halides such as CsGeX<sub>3</sub> combine a ferroelectric polarization with a semiconducting band structure. Because the polarization can be switched, so can the Rashba and Dresselhaus spin splittings tied to it, which makes these materials candidates for electrically controlled spintronics. I use density functional theory to map how structure, polarization, band gap and spin texture respond to pressure, strain, chemistry and film thickness. Along the way the calculations turned up unusual mechanical responses, including negative linear compressibility and negative longitudinal piezoelectricity.</p>
+      <figure class="theme-fig">
+        <svg viewBox="0 0 320 220" role="img" aria-labelledby="fig-pv">
+          <title id="fig-pv">The ABX3 perovskite unit cell</title>
+          <!-- cube in oblique projection: front face 70..230 x 60..220, shifted back face -->
+          <g fill="none" stroke="var(--muted)" stroke-width="1.2">
+            <path d="M80 200 L220 200 L220 60 L80 60 Z"/>
+            <path d="M130 160 L270 160 L270 20 L130 20 Z"/>
+            <path d="M80 200 L130 160 M220 200 L270 160 M220 60 L270 20 M80 60 L130 20"/>
+          </g>
+          <!-- octahedron: X anions on the six face centres, joined to their neighbours -->
+          <g fill="none" stroke="var(--gold)" stroke-width="1.4">
+            <path d="M175 40 L105 110 L175 180 L255 110 Z"/>
+            <path d="M175 40 L150 130 L175 180 M175 40 L200 90 L175 180"/>
+            <path d="M105 110 L150 130 L255 110 M105 110 L200 90 L255 110"/>
+          </g>
+          <g fill="var(--gold)">
+            <circle cx="150" cy="130" r="6"/><circle cx="200" cy="90" r="6"/>
+            <circle cx="105" cy="110" r="6"/><circle cx="255" cy="110" r="6"/>
+            <circle cx="175" cy="40" r="6"/><circle cx="175" cy="180" r="6"/>
+          </g>
+          <!-- B cation at the centre -->
+          <circle cx="175" cy="110" r="8" fill="var(--green)"/>
+          <!-- A cations on the corners -->
+          <g fill="var(--paper)" stroke="var(--ink)" stroke-width="1.4">
+            <circle cx="80" cy="200" r="11"/><circle cx="220" cy="200" r="11"/><circle cx="220" cy="60" r="11"/><circle cx="80" cy="60" r="11"/>
+            <circle cx="130" cy="160" r="11"/><circle cx="270" cy="160" r="11"/><circle cx="270" cy="20" r="11"/><circle cx="130" cy="20" r="11"/>
+          </g>
+          <g class="fig-label">
+            <text x="50" y="214">A</text>
+            <text x="187" y="104">B</text>
+            <text x="266" y="104">X</text>
+          </g>
+        </svg>
+        <figcaption>The perovskite ABX<sub>3</sub> cell: A cations at the corners, a B cation at the centre inside an octahedron of X anions (oxygen or a halide). Small distortions of this cell are what make a ferroelectric.</figcaption>
+      </figure>
+      <div class="theme-papers">
+        <h3>Representative papers</h3>
+        <ul class="papers">
+          <li><a href="https://doi.org/10.1021/jacs.3c14744">Coupling of structure and magnetism to spin splitting in hybrid organic-inorganic perovskites</a>, <span class="where">Journal of the American Chemical Society (2024)</span></li>
+          <li><a href="https://doi.org/10.1021/acs.nanolett.4c02940">Ferroelectricity in ultrathin halide perovskites</a>, <span class="where">Nano Letters (2024)</span></li>
+          <li><a href="https://doi.org/10.1103/gkt2-x7mm">Mechanically and electrically tunable Rashba-Edelstein effect in ferroelectric semiconductors CsGeX<sub>3</sub></a>, <span class="where">Physical Review Materials (2025)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevLett.128.077601">Unusual properties of hydrogen-bonded ferroelectrics: the case of Co-formate</a>, <span class="where">Physical Review Letters (2022)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevLett.125.207601">Phase switching as the origin of large piezoelectric response in organic-inorganic perovskites</a>, <span class="where">Physical Review Letters (2020)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevMaterials.6.104603">Rashba effects in lead-free ferroelectric semiconductor [CH<sub>3</sub>PH<sub>3</sub>]SnBr<sub>3</sub></a>, <span class="where">Physical Review Materials (2022)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="theme" id="caloric">
+    <h2>Caloric effects</h2>
+    <div class="theme-body">
+      <p>Ferroelectrics heat up and cool down when an electric field, a stress or a magnetic field is applied or removed. These electrocaloric, elastocaloric and multicaloric effects are a route to solid-state cooling without refrigerant gases. I developed atomistic simulations that follow the caloric response directly, including at high frequency, and used them to establish scaling laws, to show how phase competition in antiferroelectrics can be exploited, and to identify a hidden variable behind the electrocaloric response of ferroics. The same approach predicted a sizeable elastocaloric effect in carbon nanotubes and graphene.</p>
+      <figure class="theme-fig">
+        <svg viewBox="0 0 320 220" role="img" aria-labelledby="fig-ec">
+          <title id="fig-ec">Entropy against temperature with and without an electric field, showing the adiabatic temperature change</title>
+          <g fill="none" stroke="var(--muted)" stroke-width="1.2" stroke-linecap="round">
+            <line x1="40" y1="190" x2="302" y2="190"/>
+            <line x1="40" y1="190" x2="40" y2="18"/>
+            <path d="M296 186 L302 190 L296 194"/>
+            <path d="M36 24 L40 18 L44 24"/>
+          </g>
+          <g fill="none" stroke-width="2.2" stroke-linecap="round">
+            <path d="M60 176 C120 160 150 130 170 86 C185 55 230 44 290 40" stroke="var(--gold)"/>
+            <path d="M60 182 C130 172 190 150 225 112 C245 90 270 70 290 62" stroke="var(--green)"/>
+          </g>
+          <!-- adiabatic step: horizontal arrow from the E=0 curve to the E>0 curve -->
+          <g stroke="var(--ink)" stroke-width="1.4" fill="none">
+            <line x1="148" y1="120" x2="213" y2="120" stroke-dasharray="3 3"/>
+            <path d="M206 116 L213 120 L206 124"/>
+          </g>
+          <g class="fig-label">
+            <text x="226" y="34" font-style="italic">E</text><text x="236" y="34"> = 0</text>
+            <text x="226" y="80" font-style="italic">E</text><text x="236" y="80"> &gt; 0</text>
+            <text x="160" y="140">Δ<tspan font-style="italic">T</tspan></text>
+            <text x="300" y="210" font-style="italic">T</text>
+            <text x="24" y="24" font-style="italic">S</text>
+          </g>
+        </svg>
+        <figcaption>Entropy against temperature with and without a field. Applying the field at constant entropy (dashed arrow) moves the crystal to the lower curve and raises its temperature by Δ<i>T</i>; the simulations compute this step directly.</figcaption>
+      </figure>
+      <div class="theme-papers">
+        <h3>Representative papers</h3>
+        <ul class="papers">
+          <li><a href="https://doi.org/10.1103/PhysRevLett.108.167604">Bridging the macroscopic and atomistic descriptions of the electrocaloric effect</a>, <span class="where">Physical Review Letters (2012)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevMaterials.6.124403">Hidden variable in the electrocaloric effect of ferroics</a>, <span class="where">Physical Review Materials (2022)</span></li>
+          <li><a href="https://doi.org/10.1021/acs.nanolett.6b03155">Elastocaloric effect in carbon nanotubes and graphene</a>, <span class="where">Nano Letters (2016)</span></li>
+          <li><a href="https://doi.org/10.1038/srep19590">Scaling law for electrocaloric temperature change in antiferroelectrics</a>, <span class="where">Scientific Reports (2016)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevB.97.184104">High-frequency intrinsic dynamics of the electrocaloric effect from direct atomistic simulations</a>, <span class="where">Physical Review B (2018)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevB.80.140102">Intrinsic electrocaloric effect in ferroelectric alloys from atomistic simulations</a>, <span class="where">Physical Review B (2009)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="theme" id="relaxors">
+    <h2>Relaxors and disorder</h2>
+    <div class="theme-body">
+      <p>In relaxor ferroelectrics such as Ba(Ti,Zr)O<sub>3</sub>, chemical disorder smears the sharp phase transition into a broad, frequency-dependent response. Molecular dynamics simulations of these alloys trace how polar order evolves with composition and temperature, found that the polarization dynamics persists into the gigahertz range, and with machine learning showed that the relaxor state keeps a memory of the phases of its parent compounds. Related work with experimental groups addresses the central mode in (Ba,Sr)TiO<sub>3</sub> and structural disorder near the critical point of BaTiO<sub>3</sub>.</p>
+      <figure class="theme-fig">
+        <svg viewBox="0 0 320 220" role="img" aria-labelledby="fig-rx">
+          <title id="fig-rx">Dielectric permittivity against temperature for a normal ferroelectric and a relaxor</title>
+          <g fill="none" stroke="var(--muted)" stroke-width="1.2" stroke-linecap="round">
+            <line x1="40" y1="190" x2="302" y2="190"/>
+            <line x1="40" y1="190" x2="40" y2="18"/>
+            <path d="M296 186 L302 190 L296 194"/>
+            <path d="M36 24 L40 18 L44 24"/>
+          </g>
+          <!-- normal ferroelectric: sharp peak -->
+          <path d="M50 182 C90 178 110 170 118 150 C122 130 124 60 128 40 C132 60 136 130 142 150 C152 172 180 180 290 184" fill="none" stroke="var(--muted)" stroke-width="1.6"/>
+          <!-- relaxor: broad peaks that shift with frequency -->
+          <g fill="none" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round">
+            <path d="M50 184 C120 176 150 110 190 92 C230 76 260 130 290 170"/>
+            <path d="M50 185 C130 180 160 124 203 104 C240 88 265 138 290 174" opacity="0.65"/>
+            <path d="M50 186 C140 184 170 138 216 116 C250 100 270 146 290 178" opacity="0.4"/>
+          </g>
+          <g class="fig-label">
+            <text x="24" y="24" font-style="italic">ε</text>
+            <text x="300" y="210" font-style="italic">T</text>
+            <text x="112" y="34" font-style="italic">T</text><text x="121" y="38" font-size="10">C</text>
+            <text x="196" y="60">relaxor</text>
+          </g>
+        </svg>
+        <figcaption>Permittivity against temperature. A normal ferroelectric peaks sharply at <i>T</i><sub>C</sub>; a relaxor shows a broad maximum that moves with the measuring frequency.</figcaption>
+      </figure>
+      <div class="theme-papers">
+        <h3>Representative papers</h3>
+        <ul class="papers">
+          <li><a href="https://doi.org/10.1103/qhn9-42d5">Direct observation of structural disorder near critical point in BaTiO<sub>3</sub> crystal</a>, <span class="where">Physical Review Letters (2026)</span></li>
+          <li><a href="https://doi.org/10.1002/adts.202200690">Machine learning reveals memory of the parent phases in ferroelectric relaxors Ba(Ti<sub>1&minus;<i>x</i></sub>Zr<sub><i>x</i></sub>)O<sub>3</sub></a>, <span class="where">Advanced Theory and Simulations (2023)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevB.102.224109">Ba(Zr<sub>1&minus;<i>x</i></sub>,Ti<sub><i>x</i></sub>)O<sub>3</sub> relaxors: dynamic ferroelectrics at gigahertz</a>, <span class="where">Physical Review B (2020)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevB.99.064111">Phase evolution in the ferroelectric relaxor Ba(Ti,Zr)O<sub>3</sub> from atomistic simulations</a>, <span class="where">Physical Review B (2019)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="theme" id="multiferroics">
+    <h2>Multiferroics</h2>
+    <div class="theme-body">
+      <p>Bismuth ferrite, BiFeO<sub>3</sub>, is the best-known room-temperature multiferroic, with coupled ferroelectric and antiferromagnetic orders. Using a first-principles-based effective Hamiltonian, I computed its finite-temperature phase diagram, the paths its polarization and magnetic order follow under electric and magnetic fields, and the strain-driven phase transitions observed in epitaxial films. Later work identified a thermally mediated mechanism that enhances magnetoelectric coupling and explored isentropic magnetoelectric coupling in planar heterostructures.</p>
+      <figure class="theme-fig">
+        <svg viewBox="0 0 320 220" role="img" aria-labelledby="fig-mf">
+          <title id="fig-mf">A perovskite cell with polarization along the body diagonal and antiparallel spins on neighbouring iron sites</title>
+          <defs>
+            <marker id="mf-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0 L10 5 L0 10 Z" fill="context-stroke"/>
+            </marker>
+          </defs>
+          <g fill="none" stroke="var(--muted)" stroke-width="1.2">
+            <path d="M70 200 L190 200 L190 80 L70 80 Z"/>
+            <path d="M120 160 L240 160 L240 40 L120 40 Z"/>
+            <path d="M70 200 L120 160 M190 200 L240 160 M190 80 L240 40 M70 80 L120 40"/>
+          </g>
+          <!-- polarization along the body diagonal -->
+          <line x1="86" y1="188" x2="226" y2="52" stroke="var(--gold)" stroke-width="3" marker-end="url(#mf-arrow)"/>
+          <!-- Fe sites with antiparallel spins (two neighbouring cells) -->
+          <g stroke="var(--green)" stroke-width="2.4" marker-end="url(#mf-arrow)" fill="none">
+            <line x1="155" y1="138" x2="155" y2="102"/>
+            <line x1="275" y1="102" x2="275" y2="138"/>
+          </g>
+          <circle cx="155" cy="120" r="5" fill="var(--green)"/>
+          <circle cx="275" cy="120" r="5" fill="var(--green)"/>
+          <g fill="none" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="3 3">
+            <path d="M190 200 L310 200 L310 80 L190 80 M240 160 L310 160 M240 40 L310 40 L310 80 M310 200 L310 160"/>
+          </g>
+          <g class="fig-label">
+            <text x="232" y="34" font-style="italic">P</text>
+            <text x="140" y="96" font-style="italic">S</text>
+            <text x="283" y="150" font-style="italic">S</text>
+          </g>
+        </svg>
+        <figcaption>In BiFeO<sub>3</sub> the polarization <i>P</i> points along the cube diagonal while the iron spins <i>S</i> on neighbouring sites point in opposite directions. How the two orders talk to each other is the question.</figcaption>
+      </figure>
+      <div class="theme-papers">
+        <h3>Representative papers</h3>
+        <ul class="papers">
+          <li><a href="https://doi.org/10.1103/PhysRevLett.114.177205">Thermally mediated mechanism to enhance magnetoelectric coupling in multiferroics</a>, <span class="where">Physical Review Letters (2015)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevLett.105.057601">Bridging multiferroic phase transitions by epitaxial strain in BiFeO<sub>3</sub></a>, <span class="where">Physical Review Letters (2010)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevLett.103.047204">Electric-field-induced paths in multiferroic BiFeO<sub>3</sub> from atomistic simulations</a>, <span class="where">Physical Review Letters (2009)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevLett.99.227602">Finite-temperature properties of multiferroic BiFeO<sub>3</sub></a>, <span class="where">Physical Review Letters (2007)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="theme" id="methods">
+    <h2>Methods and low-dimensional materials</h2>
+    <div class="theme-body">
+      <p>Across these projects I combine density functional theory with effective Hamiltonians and molecular dynamics fitted to first-principles data, which reaches the length and time scales of films, domains and switching at finite temperature. Current efforts include effective Hamiltonians for non-perovskite ferroelectrics, benchmarks of density functionals for ferroelectric oxides, and a relaxation approach to quantum-mechanical modelling of phase transitions. Work on low-dimensional systems covers carbon nanotube junctions, magnetic graphene, transition-metal dichalcogenide layers with intercalated magnetic atoms, and topological-insulator surfaces.</p>
+      <figure class="theme-fig">
+        <svg viewBox="0 0 320 220" role="img" aria-labelledby="fig-mm">
+          <title id="fig-mm">Three simulation levels from density functional theory to molecular dynamics</title>
+          <defs>
+            <marker id="mm-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M0 0 L10 5 L0 10 Z" fill="var(--muted)"/>
+            </marker>
+          </defs>
+          <g fill="var(--panel)" stroke="var(--rule)" stroke-width="1.2">
+            <rect x="20" y="24" width="280" height="46" rx="3"/>
+            <rect x="20" y="92" width="280" height="46" rx="3"/>
+            <rect x="20" y="160" width="280" height="46" rx="3"/>
+          </g>
+          <g stroke="var(--muted)" stroke-width="1.4" marker-end="url(#mm-arrow)">
+            <line x1="160" y1="70" x2="160" y2="90"/>
+            <line x1="160" y1="138" x2="160" y2="158"/>
+          </g>
+          <g class="fig-label" font-size="13">
+            <text x="32" y="43" font-weight="600">Density functional theory</text>
+            <text x="32" y="61" fill="var(--muted)">electrons, ~100 atoms, 0 K</text>
+            <text x="32" y="111" font-weight="600">Effective Hamiltonian</text>
+            <text x="32" y="129" fill="var(--muted)">local modes and strains, fitted to DFT</text>
+            <text x="32" y="179" font-weight="600">Molecular dynamics</text>
+            <text x="32" y="197" fill="var(--muted)">up to 10<tspan dy="-5" font-size="9">7</tspan><tspan dy="5"> atoms at finite temperature</tspan></text>
+          </g>
+        </svg>
+        <figcaption>Three levels of description. Each one is built from the one above, so a prediction about a film or a switching process can be traced back to quantum mechanics.</figcaption>
+      </figure>
+      <div class="theme-papers">
+        <h3>Representative papers</h3>
+        <ul class="papers">
+          <li><a href="https://doi.org/10.1103/sdj6-vsfj">First-principles effective Hamiltonian for finite-temperature modeling of nonperovskite ferroelectrics</a>, <span class="where">Physical Review B (2025)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevMaterials.4.073802">Comparative study of Minnesota functionals performance on ferroelectric BaTiO<sub>3</sub> and PbTiO<sub>3</sub></a>, <span class="where">Physical Review Materials (2020)</span></li>
+          <li><a href="https://doi.org/10.1021/acs.nanolett.3c03169">2D materials by design: intercalation of Cr or Mn between two VSe<sub>2</sub> van der Waals layers</a>, <span class="where">Nano Letters (2023)</span></li>
+          <li><a href="https://doi.org/10.1002/smll.202504498">Alloying of Mn with Bi-rich surfaces of Bi<sub>2</sub>Te<sub>3</sub> by topotactic reaction</a>, <span class="where">Small (2025)</span></li>
+          <li><a href="https://doi.org/10.1103/PhysRevLett.108.187208">Magnetic anisotropy and engineering of magnetic behavior of the edges in Co embedded graphene nanoribbons</a>, <span class="where">Physical Review Letters (2012)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap site-foot">
+  <p>Sergey Lisenkov, Department of Physics, University of South Florida, 4202 E. Fowler Avenue, Tampa, FL 33620</p>
+  <p>Updated October 2026</p>
+</footer>
+
+</body>
+</html>
