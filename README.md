@@ -19,7 +19,7 @@ on GitHub Pages (or any web server) as soon as the files are pushed.
 | `tools/publications_template.html` | Page frame used by the script (text above the list lives here) |
 | `assets/photo.jpg` | Portrait. Replace this file with your photo (same name); 4:5 aspect ratio fits best |
 | `assets/favicon.svg` | Browser-tab icon |
-| `cv.pdf` | The CV linked from the navigation; replace when you update it |
+| `Lisenkov-CV.pdf` | The CV linked from the navigation; replace when you update it |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 
 ## Putting it on GitHub Pages
