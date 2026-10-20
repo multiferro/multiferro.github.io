@@ -91,3 +91,10 @@ put the image in `assets/` and replace the `<svg>...</svg>` block with
 
 Colours live in the `:root` block at the top of `style.css` (`--green` is
 USF green). The "Updated" date is in the footer of every page.
+
+## Visitor statistics
+
+Each page ends with a GoatCounter script. Visits, countries and referrers
+are at https://ferrolab.goatcounter.com (log in with the GoatCounter
+account). To stop counting, delete the `<script data-goatcounter=...>` line
+from each page and from `tools/publications_template.html`.
