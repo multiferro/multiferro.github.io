@@ -21,6 +21,8 @@ on GitHub Pages (or any web server) as soon as the files are pushed.
 | `assets/favicon.svg` | Browser-tab icon |
 | `Lisenkov-CV.pdf` | The CV linked from the navigation; replace when you update it |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
+| `.gitlab-ci.yml` | Lets GitLab Pages serve the same files; see `GITLAB.md` |
+| `GITLAB.md` | Instructions for hosting on GitLab instead of, or as well as, GitHub |
 
 ## Putting it on GitHub Pages
 

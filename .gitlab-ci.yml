@@ -1,0 +1,13 @@
+# GitLab Pages: publish the site exactly as it is (no build step).
+# GitHub ignores this file; it is harmless to keep it in both repositories.
+pages:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - mkdir -p public
+    - cp -r *.html style.css Lisenkov-CV.pdf publications.bib assets public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
