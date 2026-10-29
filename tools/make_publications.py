@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
-"""Build publications.html and the "Recent publications" block of index.html
-from publications.bib.
+"""Build publications.html, the "Recent publications" block of index.html and
+the "Representative papers" lists of research.html from publications.bib.
+
+To change which papers a research topic shows, edit the keys in its
+<!-- papers: ... --> comment in research.html and run this script.
 
 Run from the site root:   python3 tools/make_publications.py
 
@@ -18,6 +21,7 @@ BIB = ROOT / "publications.bib"
 TEMPLATE = ROOT / "tools" / "publications_template.html"
 OUT = ROOT / "publications.html"
 INDEX = ROOT / "index.html"
+RESEARCH = ROOT / "research.html"
 RECENT = 5                 # how many papers to show on the home page
 HIGHLIGHT = "Lisenkov"     # surname printed in bold in author lists
 
@@ -198,7 +202,27 @@ def main():
                   file=sys.stderr)
         INDEX.write_text(new, encoding="utf-8")
 
-    print(f"wrote {OUT.name} ({total} entries) and refreshed the recent list in {INDEX.name}")
+    # ---- representative papers on the research page:
+    #      <!-- papers: key1 key2 ... --> ... <!-- /papers -->  (keys from publications.bib)
+    if RESEARCH.exists():
+        number_of = {e["_key"]: total - i for i, e in enumerate(entries)}
+        by_key = {e["_key"]: e for e in entries}
+
+        def fill(m):
+            keys = m.group(1).split()
+            missing = [k for k in keys if k not in by_key]
+            if missing:
+                sys.exit(f"research.html names unknown publications.bib keys: {', '.join(missing)}")
+            items = "\n".join("          " + render_entry(by_key[k], number_of[k]) for k in keys)
+            return (f"<!-- papers: {m.group(1)} -->\n"
+                    f'        <ol class="pub-list pub-list--featured">\n{items}\n        </ol>\n'
+                    f"        <!-- /papers -->")
+
+        text = RESEARCH.read_text(encoding="utf-8")
+        RESEARCH.write_text(re.sub(r"<!-- papers: ([^>]*?) -->.*?<!-- /papers -->", fill,
+                                   text, flags=re.S), encoding="utf-8")
+
+    print(f"wrote {OUT.name} ({total} entries); refreshed {INDEX.name} and {RESEARCH.name}")
 
 
 if __name__ == "__main__":

@@ -15,7 +15,7 @@ on GitHub Pages (or any web server) as soon as the files are pushed.
 | `funding.html` | Grants |
 | `style.css` | All styling; colours and fonts are set at the top |
 | `publications.bib` | The publication list, one BibTeX entry per paper |
-| `tools/make_publications.py` | Rebuilds `publications.html` and the recent-papers block on the home page |
+| `tools/make_publications.py` | Rebuilds `publications.html`, the recent papers on the home page and the representative papers on the Research page |
 | `tools/publications_template.html` | Page frame used by the script (text above the list lives here) |
 | `assets/photo.jpg` | Portrait. Replace this file with your photo (same name); 4:5 aspect ratio fits best |
 | `assets/favicon.svg` | Browser-tab icon |
@@ -85,6 +85,11 @@ settings page once you own one.
 Open the `.html` file and edit the text. Each page repeats the same header
 and footer; if you add a page, copy the header block from an existing one
 and move `aria-current="page"` to the new page's link.
+
+Each topic on `research.html` lists its representative papers by BibTeX key in a
+`<!-- papers: key1 key2 ... -->` comment. To change the list, edit the keys
+and run `python3 tools/make_publications.py`; the full citations are filled
+in from `publications.bib`.
 
 Each topic on `research.html` has a drawn schematic inside
 `<figure class="theme-fig">`. To use a figure from one of your papers instead,
